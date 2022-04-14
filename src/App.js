@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Navbar, PrivateRoute } from './components';
-import { Explore, ForgotPassword, Offer, Profile, SignIn, SignUp } from './pages';
+import { Category, Explore, ForgotPassword, Offer, Profile, SignIn, SignUp } from './pages';
 function App() {
   return (
     <>
@@ -10,6 +10,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Explore />} />
           <Route path='/offer' element={<Offer />} />
+          <Route path='/category/:categoryName' element={<Category />} />
           <Route path='/profile' element={<PrivateRoute />}>
             <Route path='/profile' element={<Profile />} />
           </Route>
